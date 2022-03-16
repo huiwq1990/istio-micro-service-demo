@@ -22,4 +22,9 @@ kubectl label namespace default istio-injection=enabled
 kubectl apply -f ../k8s
 
 
+# https://istio.io/latest/docs/ops/integrations/kiali/
+
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.13/samples/addons/kiali.yaml
+kubectl patch service kiali -n istio-system -p '{"spec":{"type":"NodePort"}}'
+kubectl patch service kiali -n istio-system --type=json -p='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value": 30085}]'
 

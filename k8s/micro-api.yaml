@@ -41,7 +41,7 @@ spec:
         - name: regcred
       containers:
         - name: micro-api
-          image: registry.cn-hangzhou.aliyuncs.com/wudimanong/micro-api:1.0-SNAPSHOT
+          image: huiwq1990/micro-api:1.3-SNAPSHOT
           imagePullPolicy: Always
           tty: true
           ports:

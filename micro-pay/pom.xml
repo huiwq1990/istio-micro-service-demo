@@ -76,7 +76,7 @@
                 <configuration>
                     <!--指定Dockerfile文件位置-->
                     <dockerfile>docker/Dockerfile</dockerfile>
-                    <repository>${docker.repository}/wudimanong/${project.artifactId}</repository>
+                    <repository>${docker.repository}/huiwq1990/${project.artifactId}</repository>
                     <tag>${project.version}</tag>
                     <buildArgs>
                         <!--提供参数向Dockerfile传递-->

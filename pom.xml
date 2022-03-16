@@ -25,7 +25,7 @@
 
     <properties>
         <!--定义Docker镜像仓库地址(阿里云)-->
-        <docker.repository>registry.cn-hangzhou.aliyuncs.com</docker.repository>
+        <docker.repository>docker.io</docker.repository>
     </properties>
 
     <dependencyManagement>

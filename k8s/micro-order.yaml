@@ -40,7 +40,7 @@ spec:
         - name: regcred
       containers:
         - name: micro-order
-          image: registry.cn-hangzhou.aliyuncs.com/wudimanong/micro-order:1.0-SNAPSHOT
+          image: huiwq1990/micro-order:1.0-SNAPSHOT
           imagePullPolicy: Always
           tty: true
           ports:

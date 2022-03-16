@@ -45,7 +45,7 @@ spec:
         - name: regcred
       containers:
         - name: micro-pay
-          image: registry.cn-hangzhou.aliyuncs.com/wudimanong/micro-pay:1.0-SNAPSHOT
+          image: huiwq1990/micro-pay:1.0-SNAPSHOT
           imagePullPolicy: Always
           tty: true
           ports:

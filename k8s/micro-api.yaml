@@ -15,12 +15,14 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    sidecar.istio.io/inject: "true"
   name: micro-api
 spec:
   selector:
     matchLabels:
       app: micro-api
-  replicas: 3
+  replicas: 1
   #设置滚动升级策略
   #Kubernetes在等待设置的时间后才开始进行升级，例如5秒
   minReadySeconds: 5
@@ -47,4 +49,4 @@ spec:
           ports:
             - name: http
               protocol: TCP
-              containerPort: 19090
+              containerPort: 9090

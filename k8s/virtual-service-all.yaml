@@ -5,20 +5,24 @@ metadata:
 spec:
   #用于定义流量被发送到的目标主机（这里为部署在k8s中的micro-api服务）
   hosts:
-    - micro-api.default.svc.cluster.local
+    - api.demo.local
   #将VirtualService绑定到Istio网关,通过网关来暴露路由目标
   gateways:
     - micro-gateway
   http:
     - route:
-        #设置旧版本（V1）版本的流量占比为70%
-        - destination:
-            host: micro-api.default.svc.cluster.local
-            subset: v1
-          #通过权重值来设置流量占比
-          weight: 0
-        #设置新版本（V2）版本的流量占比为30%
-        - destination:
-            host: micro-api.default.svc.cluster.local
-            subset: v2
-          weight: 100
+      - destination:
+          host: micro-api
+          port:
+            number: 19090
+        # #设置旧版本（V1）版本的流量占比为70%
+        # - destination:
+        #     host: micro-api.default.svc.cluster.local
+        #     subset: v1
+        #   #通过权重值来设置流量占比
+        #   weight: 30
+        # #设置新版本（V2）版本的流量占比为30%
+        # - destination:
+        #     host: micro-api.default.svc.cluster.local
+        #     subset: v2
+        #   weight: 70

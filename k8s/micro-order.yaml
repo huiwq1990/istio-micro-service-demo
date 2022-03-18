@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -35,14 +36,10 @@ spec:
         app: micro-order
         version: v1
     spec:
-      #设置的阿里云私有镜像仓库登陆信息的secret(对应2.1.2的设置)
-      imagePullSecrets:
-        - name: regcred
       containers:
         - name: micro-order
           image: huiwq1990/micro-order:1.0-SNAPSHOT
           imagePullPolicy: Always
-          tty: true
           ports:
             - name: http
               protocol: TCP

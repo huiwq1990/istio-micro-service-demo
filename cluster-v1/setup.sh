@@ -22,6 +22,10 @@ kubectl label namespace default istio-injection=enabled
 kubectl apply -f ../k8s
 
 
+# istioctl dashboard prometheus
+# istioctl dashboard kiali
+# istioctl dashboard grafana
+
 # https://istio.io/latest/docs/ops/integrations/kiali/
 
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.13/samples/addons/kiali.yaml

@@ -6,3 +6,4 @@ micro-pay/target
 micro-pay-client/target
 istio-fake/target
 feign-istio-fake/target
+VMS/.vagrant
